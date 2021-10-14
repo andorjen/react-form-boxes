@@ -1,10 +1,15 @@
-function Box({height, width, backgroundColor}){
+function Box({id, height, width, backgroundColor,deleteBox}){
     const styles = {
         height: `${height}px`,
         width:`${width}px`,
         backgroundColor:`${backgroundColor}`
     }
-    return <div style={styles}></div>
+    return (
+    <div id={id}>
+        <div style={styles}></div>
+        <button onClick={deleteBox(id)}>Remove the Box!</button>
+    </div>
+    )
 }
 
 
